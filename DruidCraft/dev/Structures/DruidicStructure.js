@@ -105,7 +105,9 @@ function setStructure(coords){
 
 
 Callback.addCallback("GenerateChunk", function(chunkX, chunkZ){
-            var coords = GenerationUtils.randomCoords(chunkX, chunkZ, 15, 20);
+var random = Math.random()*2000;
+if (random <= 90){
+            var coords = GenerationUtils.randomCoords(chunkX, chunkZ, 5, 10);
         coords = GenerationUtils.findSurface(coords.x, coords.y, coords.z);
         if (World.getBlock(coords.x, coords.y, coords.z).id == 2){
             if (World.getBlock(coords.x+1, coords.y, coords.z).id == 2){
@@ -117,5 +119,6 @@ Callback.addCallback("GenerateChunk", function(chunkX, chunkZ){
                         }
                     }
                 }
-            }               
+            }  
+}        
 });

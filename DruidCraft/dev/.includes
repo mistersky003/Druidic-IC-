@@ -28,6 +28,8 @@ Block/RuneAltar/Altar.js
 Block/RuneAltar/RecipesMaterial.js
 Block/RuneAltar/RecipesArmor.js
 Block/RuneAltar/RecipesTools.js
+Block/CloneAltar/block.js
+Block/CloneAltar/TileEntity.js
 
 Block/CookingRack/CookingRack.js
 Block/CookingRack/windmill.js
