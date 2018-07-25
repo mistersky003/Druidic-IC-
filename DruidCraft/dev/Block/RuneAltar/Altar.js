@@ -50,8 +50,7 @@ var guiAltar = new UI.StandartWindow({
 
 TileEntity.registerPrototype(BlockID.altar, {
 	defaultValues: {
-		progress: 0,
-		progressMax: 10
+		progress: 0
 	},
 	
 	getGuiScreen: function () {
@@ -60,7 +59,7 @@ TileEntity.registerPrototype(BlockID.altar, {
 		
 	
 	init:function(){
-		this.animationItem = new Animation.Item(this.x+.5, this.y+0.89, this.z+.5);
+		this.animationItem = new Animation.Item(this.x+.5, this.y+0.90, this.z+.5);
 	},
 	
 
@@ -98,7 +97,8 @@ TileEntity.registerPrototype(BlockID.altar, {
         var output = RecipeRegistry.getAltarRecipe(input);
 		
 	   if (output){
-
+		   this.data.progress++;
+		   if (this.data.progress++ >= 21){
  slotSource1.count--;
  slotSource2.count--;
  slotSource3.count--;
@@ -118,7 +118,8 @@ TileEntity.registerPrototype(BlockID.altar, {
  slotResult.id = output.Result.id;
  slotResult.data = output.Result.data;
  slotResult.count += output.Result.count;
-	 
+  this.data.progress = 0;
+		   }
 	 }  
 	 this.container.validateAll();  
    }

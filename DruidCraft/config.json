@@ -2,5 +2,6 @@
   "enabled":true,
   "Hard Mode":false,
   "Auto Replacement":true,
-  "Show durability":true
+  "Show durability":true,
+  "Druidic Structure":true
 }

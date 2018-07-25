@@ -1,3 +1,5 @@
+if(__config__.access("Druidic Structure") == true){
+
 var structure = FileTools.ReadJSON(__dir__+"/json/structure.json");
 
 var generateItems =[
@@ -122,3 +124,5 @@ if (random <= 90){
             }  
 }        
 });
+
+}

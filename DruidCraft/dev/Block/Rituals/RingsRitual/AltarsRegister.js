@@ -12,7 +12,7 @@ RenderHelper.setRitualAltarRender(BlockID.druidicAltar, true);
 IDRegistry.genBlockID("druidicAltarController");
 Block.createBlockWithRotation("druidicAltarController", [
     {
-        name: "Ritual Altar",
+        name: "Ritual Controller",
         texture: [["runealtar_side", 0], ["ringaltar", 0], ["runealtar_side", 0], ["runealtar_side", 0], ["runealtar_side", 0], ["runealtar_side", 0]],
         inCreative: true
     }

@@ -11,9 +11,9 @@ var Terros = 0;
 
 Saver.addSavesScope("BackpacksScope",
     function read(scope) {
-        Infernos = scope.InfernosSaves || 20000;
-        Aeris = scope.AerisSaves || 20000;
-        Terros = scope.TerrosSaves || 20000;
+        Infernos = scope.InfernosSaves || 0;
+        Aeris = scope.AerisSaves || 0;
+        Terros = scope.TerrosSaves || 0;
     },
 
     function save() {

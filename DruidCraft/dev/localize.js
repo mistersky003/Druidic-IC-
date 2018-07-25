@@ -5,6 +5,12 @@ Translation.addTranslation("Rune swamp", {ru: "Руна болота"});
 Translation.addTranslation("Rune ocean", {ru: "Руна океана"});
 Translation.addTranslation("Rune Hell", {ru: "Руна ада"});
 Translation.addTranslation("Rune desert", {ru: "Руна пустыны"});
+//Other Rune
+Translation.addTranslation("Rune of fear", {ru: "Руна страха"});
+Translation.addTranslation("Rune pain", {ru: "Руна боли"});
+Translation.addTranslation("Rune stranght", {ru: "Руна силы"});
+Translation.addTranslation("Rune Thor", {ru: "Руна Тора"});
+Translation.addTranslation("Rune Odin", {ru: "Руна Одина"});
 //Bottles
 Translation.addTranslation("Empty Bottle", {ru: "Пустая бутылка"});
 Translation.addTranslation("Sbaeris Bottle", {ru: "Бутылка Аэрис"});
@@ -12,6 +18,8 @@ Translation.addTranslation("Sbterros Bottle", {ru: "Бутылка Террос"
 Translation.addTranslation("Sbinfernos Bottle", {ru: "Бутылка Инфернос"});
 //Block
 Translation.addTranslation("Rune Altar", {ru: "Рунический алтарь"});
+Translation.addTranslation("Ritual Altar", {ru: "Ритуальный Алтарь"});
+Translation.addTranslation("Ritual Controller", {ru: "Ритуальный контроллер"});
 Translation.addTranslation("Cooking Rack", {ru: "Наполнитель"});
 Translation.addTranslation("Block Adamentite", {ru: "Адамантиевый блок"});
 Translation.addTranslation("Block Amethyst", {ru: "Аметистовый блок"});
@@ -86,5 +94,13 @@ Translation.addTranslation("Saphire ring", {ru: "Сапфировое кольц
 Translation.addTranslation("Nephrite ring", {ru: "Нефритовое кольцо"});
 Translation.addTranslation("Full-color Ring", {ru: "Полноцветное кольцо"});
 Translation.addTranslation("Iron Ring", {ru: "Железное кольцо"});
+//Magic Item
+Translation.addTranslation("Mjomnir", {ru: "Мьелнир"});
+Translation.addTranslation("Gungnir", {ru: "Гунгнир"});
+Translation.addTranslation("Megic belt", {ru: "Волшебный пояс"});
+Translation.addTranslation("Wings", {ru: "Крылья"});
 //Other
 Translation.addTranslation("Druidology", {ru: "Друидология"});
+Translation.addTranslation("Druidic Backpack", {ru: "Друидный рюкзак"});
+
+
