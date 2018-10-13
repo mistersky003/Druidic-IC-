@@ -13,6 +13,8 @@ Baubles.registerBauble({
     }
 });
 
+
+
 Baubles.registerBauble({
     id: ItemID.megicBelt,
     type: "belt",
@@ -20,6 +22,7 @@ Baubles.registerBauble({
         Entity.addEffect(Player.get(), 5, 5, 5, true, true);
     }
 });
+
 
 Baubles.registerBauble({
     id: ItemID.saphireRing,
@@ -34,7 +37,7 @@ Baubles.registerBauble({
 	 
    Baubles.registerBauble({
     id: ItemID.Wings,
-    type: "head",
+    type: "body",
 	onTakeOff: function () {
         Player.setFlyingEnabled(false);
     },
@@ -54,3 +57,39 @@ Baubles.registerBauble({
 	
     }
 });
+
+
+var Wings = {
+	
+	registerBaubleWings: function (id, count){
+		
+		Baubles.registerBauble({
+    id: id,
+    type: "body",
+	onTakeOff: function () {
+        Player.setFlyingEnabled(false);
+    },
+    tick: function () {
+		let flying = Player.getFlying();
+		let velocity = Player.getVelocity();
+        if ((Aeris >= count) && (fly === true)){
+			Player.setFlyingEnabled(true);
+		}
+		if ((Aeris >= count) && (fly === true) && (flying === true)){
+			Aeris -=count;
+		}
+		if ((Aeris < 1) || (fly === false)){
+			Player.setFlyingEnabled(false);
+						Player.setVelocity(velocity.x, -0.1, velocity.z);
+		}
+	
+    }
+		});
+  }
+};
+
+IDRegistry.genItemID("testW");
+Item.createItem("testW", "NoNe", {name: null, meta: 0}, {stack: 1});
+
+Wings.registerBaubleWings(ItemID.testW, 5, true);
+
