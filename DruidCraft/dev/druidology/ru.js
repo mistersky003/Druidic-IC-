@@ -1,3 +1,5 @@
+if(__config__.access("Druidology language(RU - EN)") == false){
+
 IDRegistry.genItemID("druidology"); 
 Item.createItem("druidology", "Druidology", {name: "druidology", meta: 0}, {stack: 1});
 
@@ -1521,9 +1523,46 @@ right: {
                     elements: [
                         {text: "Крылья", size: 25, link: "wings"},
                         {text: "Рюкзак", size: 25, link: "backpack"},  
+                        {text: "Druidic Структура", size: 25, link: "druidic_strukture"},  
                         {text: "Фичи Druidic Craft", size: 25, link: "features"}  
                     ]
                 }
+},
+
+"druidic_strukture": {
+               preLink: "other",
+                nextLink: "other",
+             left: {
+                    controller: PageControllers.ITEM_PAGE,
+                    items: [
+                        /*{id: ItemID.fenixFeather}*/
+                    ],
+                    elements: [
+                        {text: "Друидик структура", size: 20},
+                        {text: "Друидик структура - это мультиблочна структура, генруеться в различных биомов кроме пустини.В центре структуры если сломать полублок можно увидеть сундук в которой можно найти некоторые предметы:", size: 18},
+                        {text: "-алмаз (шанс: 20%, макс. количество: 2)", size: 18},
+                        {text: "-золото (шанс: 30%, макс. количество: 4)", size: 18},
+                        {text: "-железный слиток (шанс: 90%, макс. количество: 6)", size: 18},
+                        {text: "-рубин (шанс: 20%, макс. количество: 2)", size: 18},
+                        {text: "-сапфир (шанс: 30%, макс. количество: 2)", size: 18},
+                        {text: "-нефрит (шанс: 30%, макс. количество: 2)", size: 18}
+						]
+			 },
+			 
+			 right: {
+                    controller: PageControllers.ITEM_PAGE,
+                    items: [
+                    ],
+                    elements: [
+                        {text: "-руна болота (шанс: 80%, макс. количество: 3)", size: 18},
+                        {text: "-руна океана (шанс: 80%, макс. количество: 3)", size: 18},
+                        {text: "-руна ада (шанс: 80%, макс. количество: 3)", size: 18},
+                        {text: "-руна пустыны (шанс: 80%, макс. количество: 3)", size: 18},
+                        {text: "Внимание !!! Если вы разработчик, то вы можете использовать ДруидицAPI и добавлять свои предмети.ДруидицAPI описано в документации которую можно найти в официальной группе мода - https://vk.com/druidic_craft", size: 20, color: android.graphics.Color.RED}
+						]
+			 },
+                 
+
 },
 
 "wings": {
@@ -1613,3 +1652,5 @@ right: {
 }   
 });
 });
+
+}

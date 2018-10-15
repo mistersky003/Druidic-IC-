@@ -3,6 +3,7 @@ ModAPI.registerAPI("DruidicAPI", {
 	RecipeRegistry: RecipeRegistry,
 	ItemInfo: ItemInfo,
 	Wings: Wings,
+	DruidicStructure: DruidicStructure,
 	
 	requireGlobal: function(command){
 		return eval(command);

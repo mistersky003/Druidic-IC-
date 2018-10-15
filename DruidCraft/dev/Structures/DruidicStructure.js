@@ -5,7 +5,9 @@ var structure = FileTools.ReadJSON(__dir__+"/json/structure.json");
 var generateItems =[
 ];
 
-function addItemsToGenerateChest(id, random, count, data){
+var DruidicStructure = {
+
+  addItems: function (id, random, count, data){
     random = random||1;
     count = count||{};
     count.min = count.min||1;
@@ -14,22 +16,24 @@ function addItemsToGenerateChest(id, random, count, data){
     generateItems.push({id:id, data:data, random:random, count:count});
 }
 
-addItemsToGenerateChest(264, 0.2, {max:3});
+};
 
-addItemsToGenerateChest(266, 0.6, {max:4});
+DruidicStructure.addItems(264, 0.2, {max:2});
 
-addItemsToGenerateChest(265, 1, {max:6});
+DruidicStructure.addItems(266, 0.3, {max:4});
 
-addItemsToGenerateChest(ItemID.ruby, 0.7, {max:2});
-addItemsToGenerateChest(ItemID.saphire, 0.6, {max:2});
-addItemsToGenerateChest(ItemID.nephrite, 0.5, {max:3});
+DruidicStructure.addItems(265, 0.9, {max:6});
 
-addItemsToGenerateChest(ItemID.runeswamp, 1, {max:4});
+DruidicStructure.addItems(ItemID.ruby, 0.2, {max:2});
+DruidicStructure.addItems(ItemID.saphire, 0.3, {max:2});
+DruidicStructure.addItems(ItemID.nephrite, 0.3, {max:2});
 
-addItemsToGenerateChest(ItemID.runeocean, 0.4, {max:4});
-addItemsToGenerateChest(ItemID.runehell, 0.4, {max:3});
+DruidicStructure.addItems(ItemID.runeswamp, 0.8, {max:3});
 
-addItemsToGenerateChest(ItemID.runedesert, 0.8, {max:5});
+DruidicStructure.addItems(ItemID.runeocean, 0.8, {max:3});
+DruidicStructure.addItems(ItemID.runehell, 0.8, {max:3});
+
+DruidicStructure.addItems(ItemID.runedesert, 0.8, {max:3});
 
 
 function fillChest(x,y,z){
@@ -107,8 +111,8 @@ function setStructure(coords){
 
 
 Callback.addCallback("GenerateChunk", function(chunkX, chunkZ){
-var random = Math.random()*2000;
-if (random <= 90){
+var random = Math.random()*3000;
+if (random <= 95){
             var coords = GenerationUtils.randomCoords(chunkX, chunkZ, 5, 10);
         coords = GenerationUtils.findSurface(coords.x, coords.y, coords.z);
         if (World.getBlock(coords.x, coords.y, coords.z).id == 2){

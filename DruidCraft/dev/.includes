@@ -39,7 +39,8 @@ Block/Rituals/RingsRitual/RitualRegistry.js
 Block/materialBlock.js
 
 
-druidology.js
+druidology/ru.js
+druidology/en.js
 
 
 localize.js

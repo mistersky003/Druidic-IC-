@@ -15,6 +15,7 @@ TileEntity.registerPrototype(BlockID.cloneAltar,{
      tick: function (){
      if (this.data.item > 0){
        this.data.progress++;
+	   
        if (this.data.progress++ >= 100){
        let item = this.data.item;
 World.drop(this.x-1, this.y, this.z, item, 1);
